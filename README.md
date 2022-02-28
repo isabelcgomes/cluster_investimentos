@@ -1,4 +1,5 @@
 # Projeto: Clusterização Fundos de Ivestimentos
+*Documentação de projeto*
 
 ## Instruções
 
@@ -120,6 +121,20 @@ A clusterização satisfaz a homogeneidade em 100% quando todos os clusteres só
 A homogeneidade foi, para o K-Means com inicialização aleatória foi de 80% e, para a inicialização com K-Means++ foi de 49,2%
 
 ![](img/tabelahomogeneidade.png)
+
+**Silhueta**
+
+A silhueta corresponde a: 
+
+$$
+Silhueta = \frac{(Sep-Coes)}{(Sep)}
+$$
+
+Essa métrica busca a maior coesão e a maior separação ao mesmo tempo, ou seja o quanto os clusteres estão bem divididos e o quanto seus componentes estão bem agrupados entre si. Quanto mais próximo de -1, menos organizada está a clusterização e será necessário ajustar a quantidade de clusteres para o problema. Quanto mais próximo de 1 mais bem organizados estão os clusteres, mais a observação se encaixa no cluster ao qual foi alocada e mais distante dos outros clusteres ela está.
+
+Para o modelo com início aleatório, a silhueta correspondeu a 73,2% e para o kmeans ++ a silhueta foi de 75,5% indicando a boa organização dos clusters.
+
+![](img/tabelasilhueta.png)
 
 **Completude**
 
